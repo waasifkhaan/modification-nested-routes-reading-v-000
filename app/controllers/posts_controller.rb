@@ -21,7 +21,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    binding.pry
+    raise inspect[:params]
     @post = Post.new(post_params)
     @post.save
     redirect_to post_path(@post)
