@@ -4279,3 +4279,16 @@ TypeError (no implicit conversion of Symbol into Integer):
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (52.4ms)
+
+
+Started POST "/posts" for 104.184.102.153 at 2018-10-16 15:17:41 +0000
+Cannot render console from 104.184.102.153! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EAlJdJPgKbOxPz6MGqkXGffXT2gc++vM1PuECzYNPr2H93TxyJafgup72ZxadX56BFv4YPcw09DMhWDDrnVScg==", "post"=>{"title"=>"asdf", "author_id"=>"", "description"=>"asdf"}, "commit"=>"Create Post"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  app/controllers/posts_controller.rb:24:in `inspect'
+  app/controllers/posts_controller.rb:24:in `create'
+
+
